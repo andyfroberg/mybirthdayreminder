@@ -1,0 +1,16 @@
+root {
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    background-color: #000;
+}
+
+.header {
+    background-color: #000;
+}
+
+.header-text {
+    font-family:'Courier New', Courier, monospace;
+}

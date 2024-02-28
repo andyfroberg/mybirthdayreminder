@@ -4,14 +4,20 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{{ page_title }}</title>
-    <link rel="stylesheet" href="../static/styles.css">
+    <link href="{{ url_for('static', path='/styles.css') }}" rel="stylesheet">
 </head>
 <body>
-    {{ header(logged_in) }}
+    {% if logged_in %}
+        {% include "header-logged-in.html" %}
+    {% else %}
+        {% include "header-logged-out.html" %}
+    {% endif %}
+
 
     {% block content %}
     {% endblock content %}
 
-    {{ footer() }}
+    {% include "footer.html" %}
+
 </body>
 </html>
