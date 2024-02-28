@@ -1,0 +1,19 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <h2>My Reminders</h2>
+    <table>
+        <tr>
+            <th>Name</th>
+            <th>Day</th>
+            <th>Options</th>
+        </tr>
+        {% for reminder in reminders %}
+            <tr>
+                <td>{{ reminder.name }}</td>
+                <td>{{ reminder.day }}</td>
+                <td><a href="">Edit</a></td>
+            </tr>
+        {% endfor %}
+    </table>
+{% endblock content %}
