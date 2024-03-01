@@ -1,16 +1,47 @@
-root {
+:root {
     margin: 0;
     padding: 0;
 }
 
 html {
-    background-color: #000;
+    background-color: #f7f7f7;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+ul {
+    list-style-type: none;
 }
 
 .header {
-    background-color: #000;
+    background-color: #999999;
+    padding: 0.5rem;
 }
 
 .header-text {
     font-family:'Courier New', Courier, monospace;
+}
+
+footer {
+    background: linear-gradient(125deg, rgba(0,0,0,0.9),rgba(0,0,0,0.5));
+    color: white;
+}
+
+footer a {
+    color: rgba(200,200,200,0.75)
+}
+
+footer a:hover {
+    color: rgba(200,200,200,0.9);
+    transition: color 0.5s ease-in-out;
+    
+}
+
+.nav-items {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
 }

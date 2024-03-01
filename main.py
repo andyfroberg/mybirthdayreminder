@@ -17,8 +17,32 @@ async def name(request: Request):
 
 @app.get("/my-reminders")
 async def reminders(request: Request):
-    return templates.TemplateResponse("reminders.html", {"request": request})
+    """
+    assert user logged in
+    """
+    logged_in = True
+    reminders = [
+        Reminder("mom", "May 12"),
+        Reminder("dad", "August 13"),
+        Reminder("jenna", "August 15"),
+        Reminder("sophia", "July 3"),
+        Reminder("aunt candy", "December 28")
+    ]
+    user1 = User("andy", reminders)
 
+    return templates.TemplateResponse(request=request, name="my-reminders.html", context={"logged_in": logged_in, "reminders": user1.reminders})
+
+
+class Reminder:
+    def __init__(self, name: str=None, day: str=None):
+        self.name = name
+        self.day = day
+
+
+class User:
+    def __init__(self, username: str=None, reminders: list[Reminder]=[]):
+        self.username = username
+        self.reminders = reminders
 
 if __name__ == "__main__":
     uvicorn.run(app, host="0.0.0.0", port=8000)
