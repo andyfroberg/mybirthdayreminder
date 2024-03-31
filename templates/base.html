@@ -17,7 +17,9 @@
     {% block content %}
     {% endblock content %}
 
+    {% with footer_year=footer_year %}
     {% include "footer.html" %}
+    {% endwith %}
 
 </body>
 </html>
