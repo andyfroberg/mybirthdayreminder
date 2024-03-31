@@ -4,7 +4,6 @@ from fastapi.staticfiles import StaticFiles
 from fastapi.templating import Jinja2Templates
 from fastapi.responses import RedirectResponse
 from typing import Type
-from pydantic import BaseModel
 from datetime import date
 from schemas import AddReminderForm
 
