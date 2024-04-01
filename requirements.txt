@@ -1,6 +1,7 @@
+email-validator
 fastapi
-uvicorn[standard]
 jinja2
 python-multipart
 pydantic
-email-validator
+sqlalchemy
+uvicorn[standard]
