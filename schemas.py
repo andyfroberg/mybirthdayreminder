@@ -19,3 +19,4 @@ class AddReminderForm(BaseModel):
             birthday_month=birthday_month, 
             birthday_day=birthday_day
         )
+
